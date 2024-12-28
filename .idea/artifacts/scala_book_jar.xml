@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="scala_book:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/scala_book_jar</output-path>
+    <root id="archive" name="scala_book.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="scala_book" />
+      <element id="extracted-dir" path="$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-library_3/jars/scala3-library_3-3.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.5.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
