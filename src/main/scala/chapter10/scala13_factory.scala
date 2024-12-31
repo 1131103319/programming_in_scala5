@@ -50,7 +50,6 @@ object scala13_factory extends App {
   object Element {
 
     private class VectorElement(val contents: Vector[String]) extends Element
-
     private class LineElement(s: String) extends Element :
       val contents = Vector(s)
       override def width: Int = s.length
