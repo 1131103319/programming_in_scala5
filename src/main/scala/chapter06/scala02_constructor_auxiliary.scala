@@ -37,7 +37,7 @@ object scala02_constructor_auxiliary extends App {
 
     def max(that: Rational) =
       if lessThan(that) then that else this
-
+    //循环取余
     private def gcd(a: Int, b: Int): Int =
       if b == 0 then a else gcd(b, a % b)
   }

@@ -11,21 +11,21 @@ object scala05_rich_wrapper extends App {
    * 你目前需要知道的是，本章提到的每个基础类型,都有一个对应的“富包装类”，提供了额外的方法。
    */
 
-  println(0 max 5)
+  println(0 max 5) //5
 
-  println(0 min 5)
+  println(0 min 5) //0
 
-  println(-2.7.abs)
+  println(-2.7.abs) //2.7
 
-  println(-2.7.round)
+  println(-2.7.round) //-3
+  //是否无穷大
+  println(1.5.isInfinity) //false
 
-  println(1.5.isInfinity)
+  println((1.0/0).isInfinity) //true
 
-  println((1.0/0).isInfinity)
+  println(4 to 6) //Range 4 to 6
+  //首字母大写
+  println("bob".capitalize) //Bob
 
-  println(4 to 6)
-
-  println("bob".capitalize)
-
-  println("robert".drop(2))
+  println("robert".drop(2)) //bert
 }

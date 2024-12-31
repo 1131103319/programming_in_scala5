@@ -14,7 +14,7 @@ object exists_isUpper {
     Console println 10
 
     val listBuffer =new ListBuffer[String]
-    listBuffer.append()
+    listBuffer.append("hello")
   }
 
   def max(x: Int, y: Int) =

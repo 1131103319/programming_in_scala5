@@ -8,7 +8,7 @@ object scala01_Big_Num extends App {
    */
   val invoice: BigInt = 1_000_000_000
   val pi: BigDecimal = 3.1415926535897932384626433833
-
+  println(invoice.toString()+ " " +pi)
   //字符字面量
   val a = 'A'
 

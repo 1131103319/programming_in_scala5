@@ -59,26 +59,26 @@ object scala03_for extends App {
   def fileLines(file: java.io.File)=
     scala.io.Source.fromFile(file).getLines().toArray
 
-  def grep(pattern: String) =
-    for
-      file<- (new File("C:\\Users\\yosuke\\Desktop\\代码1")).listFiles()
-      if file.getName.endsWith(".scala")
-      line <- fileLines(file)
-      if line.trim.matches(pattern)
-    do println(s"${file.getName}:${line.trim}")
+//  def grep(pattern: String) =
+//    for
+//      file<- (new File("C:\\Users\\yosuke\\Desktop\\代码1")).listFiles()
+//      if file.getName.endsWith(".scala")
+//      line <- fileLines(file)
+//      if line.trim.matches(pattern)
+//    do println(s"${file.getName}:${line.trim}")
 
-  grep(".*gcd.*")
+//  grep(".*gcd.*")
 
-  def grep_ex(pattern:String) =
-    for
-      file<- (new File("C:\\Users\\yosuke\\Desktop\\代码1")).listFiles()
-      if file.getName.endsWith(".scala")
-      line<- fileLines(file)
-      trimmed = line.trim
-      if trimmed.matches(pattern)
-    do println(s"ex---${file.getName}:${line.trim}")
-
-  grep_ex(".*gcd.*")
+//  def grep_ex(pattern:String) =
+//    for
+//      file<- (new File("C:\\Users\\yosuke\\Desktop\\代码1")).listFiles()
+//      if file.getName.endsWith(".scala")
+//      line<- fileLines(file)
+//      trimmed = line.trim
+//      if trimmed.matches(pattern)
+//    do println(s"ex---${file.getName}:${line.trim}")
+//
+//  grep_ex(".*gcd.*")
 
 
   /**
@@ -91,13 +91,13 @@ object scala03_for extends App {
    * 在本例中，结果是Array[File]，因为filesHere是一个数组，而交出的表达式类型为File。
    */
 
-  def scalaFiles:Array[File] =
-    for
-      file <- (new File("C:\\Users\\yosuke\\Desktop\\代码1")).listFiles()
-      if file.getName.endsWith(".scala")
-    yield file
-
-  println(scalaFiles.toBuffer)
+//  def scalaFiles:Array[File] =
+//    for
+//      file <- (new File("C:\\Users\\yosuke\\Desktop\\代码1")).listFiles()
+//      if file.getName.endsWith(".scala")
+//    yield file
+//
+//  println(scalaFiles.toBuffer)
 
 
   val forLineLengths =

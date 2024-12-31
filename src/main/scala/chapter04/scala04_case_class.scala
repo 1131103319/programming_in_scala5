@@ -26,9 +26,11 @@ object scala04_case_class extends App {
       new Person(capitalizedName, age)
   }
 
-  //加上case修饰符以后，编译器将会生成若干有用的方法。首先,编译器将会创建一个伴生对象并放入名称为apply的工厂方法中。于是你就可以像这样构造一个新的Person对象:
+  //加上case修饰符以后，编译器将会生成若干有用的方法。首先,编译器将会创建一个伴生对象并放入名称为apply的工厂方法中。
+  // 于是你就可以像这样构造一个新的Person对象:
   //编译器会把这一行代码重写为对生成的工厂方法apply的调用:Person.apply("Sally", 39)
   val p: Person = Person("sally", 39)
+  println(p.appendToName("li"))
 
   println(p.toString) //Person(Sally,39)
 

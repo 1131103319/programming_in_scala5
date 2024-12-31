@@ -1,10 +1,10 @@
 package chapter05
 
+import scala.annotation.targetName
+
 object scala03_operator_symbol extends App {
 
   val sum = 1 + 2 //Scala 将调用1.+(2)
-
-
   /**
    *
    *
@@ -30,23 +30,13 @@ object scala03_operator_symbol extends App {
   -7
   -2.0
   (2.0).unary_-
-  def unary_!(boolean: Boolean): Boolean ={
-    boolean
+  def unary_! : Boolean ={
+    false
   }
-  println(! false)
+  println(!scala03_operator_symbol)
 
 
   //后缀操作符
   //implicit scala.language.postfixOps
   7.toString
-
-
-
-
-
-
-
-
-
-
 }

@@ -30,7 +30,7 @@ object scala01_control_abstract extends App {
    * 你可以通过在单例对象中定义一个公共的filesEnding方法的方式来提供这样的API，就像这样:
    */
   object FileMatcher {
-    private def filesHere = (new File("C:\\Users\\yosuke\\Desktop\\代码1")).listFiles()
+    private def filesHere = (new File(".")).listFiles()
 
     //    def filesEnding(query:String)=
     //      (for file <- filesHere if file.getName.endsWith(query) yield file).toBuffer

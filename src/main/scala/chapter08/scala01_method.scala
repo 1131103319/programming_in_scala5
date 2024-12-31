@@ -29,7 +29,7 @@ object scala01_method extends App {
       val paddedLines =
         for line <- text.linesIterator yield
           padLine(line,minWidth)
-      paddedLines.mkString("\n")
+      paddedLines.mkString(" ")
 
     private def padLine(line:String,minWidth:Int):String =
       if line.length>=minWidth then line
@@ -45,6 +45,6 @@ object scala01_method extends App {
       |d231iekwgcdsjakdkl
       |""".stripMargin
 
-  println(Padding.padLines(str,40))
+  println(Padding.padLines(str,10))
 
 }

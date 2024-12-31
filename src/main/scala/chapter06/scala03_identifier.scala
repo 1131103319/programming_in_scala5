@@ -5,8 +5,6 @@ object scala03_identifier extends App {
   /**
    * 字母数字组合标识符( alphanumeric identifier)
    * 以字母或下画线开头,可以包含更多的字母、数字或下划线
-   *
-   *
    * 虽然下画线是合法的标识符，但是它在Scala程序中并不常用，其中一部分原因是与Java保持一致，
    * 不过另一个原因是下画线在Scala代码中还有许多其他非标识符的用法。
    * 因为上述原因，最好不使用像to_string、_init_或name_这样的标识符。
@@ -29,8 +27,8 @@ object scala03_identifier extends App {
 
 
   /**
-   * 操作标识符(operator identifier）由一个或多个操作符构成。操作符指的是那些可以被打印出来的ASCI字符，如+、:、?、~、#等。下面是一些操作标识符举例
-   *
+   * 操作标识符(operator identifier）由一个或多个操作符构成。操作符指的是那些可以被打印出来的ASCI字符，如+、:、?、~、#等。
+   * 下面是一些操作标识符举例
    * + ++ ::: <?> :>
    */
 

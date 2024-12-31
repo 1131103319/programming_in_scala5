@@ -30,7 +30,7 @@ object scala02_while extends App {
   while
     val line = readLine()
     println(s"Read:$line")
-    line != "1"
+    line != "1" //循环条件
   do println(1)
 
 

@@ -15,7 +15,7 @@ object scala02_string_print extends App {
    */
 
   println(raw"No\\\\escape!") //No\\\\escape!
-
+  println(s"No\\\\escape!") //No\\escape!
   println(f"${math.Pi}%.5f") //3.14159
 
 
@@ -23,6 +23,5 @@ object scala02_string_print extends App {
    * 在Scala中，字符串插值是通过在编译期重写代码来实现的。
    * 编译器会将任何由某个标识符紧接着字符串字面量的(左)双引号这样的表达式当作字符串插值器表达式处理。
    */
-
 
 }

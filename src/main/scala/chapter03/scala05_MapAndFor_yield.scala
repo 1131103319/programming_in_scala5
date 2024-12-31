@@ -19,8 +19,10 @@ object scala05_MapAndFor_yield extends App {
     adj + "Fish" //List("One Fish", "Two Fish", "Red Fish", "Blue Fish")
 
   /**
-   * 请注意，当你对List执行map操作时，得到的返回值是—一个新的list; 而当你对Vector执行map操作时，得到的返回值是一个新的vector。你会发现绝大多数定义了map方法的类型都具备这个模式。
-   * 请注意，当你对列表执行映射操作时，得到的返回值是-一个新的列表而当你对向量执行映射操作时，得到的返回值是一个新的向量。你会发现绝大多数定义了地图方法的类型都具备这个模式.
+   * 请注意，当你对List执行map操作时，得到的返回值是—一个新的list; 而当你对Vector执行map操作时，得到的返回值是一个新的vector。
+   * 你会发现绝大多数定义了map方法的类型都具备这个模式。
+   * 请注意，当你对列表执行映射操作时，得到的返回值是-一个新的列表而当你对向量执行映射操作时，得到的返回值是一个新的向量。
+   * 你会发现绝大多数定义了地图方法的类型都具备这个模式.
    *
    * 最后再看一个例子,Scala的Option类型。Scala用Option表示可选的值，而不使用像Java—样用null表达此含义的传统技法。
    * Option要么是一个Some，表示值存在;要么是一个None，表示没有值。
@@ -28,7 +30,8 @@ object scala05_MapAndFor_yield extends App {
    * 作为一个展示Option实际使用的案例，我们可以考查—下find方法。
    * 所有的Scala集合类型，包括List和Vector，都具备find方法，其作用是查找满足给定前提的元素，这个前提是一个接收元素类型的参数并返回布尔值的函赛。
    * find方法的结果类型是Option[E]，其中，E是集合的元素类型。find方法会逐个遍历集合的元素，将元素传递给前提。
-   * 如果前提返回了true，find就停止遍历，并将当前元素包装在Some中返回。如果find遍历了所有元素都没有找到能通过前提判断的元素，就会返回None。下面是一些结果类型均为Option[String]的示例
+   * 如果前提返回了true，find就停止遍历，并将当前元素包装在Some中返回。
+   * 如果find遍历了所有元素都没有找到能通过前提判断的元素，就会返回None。下面是一些结果类型均为Option[String]的示例
    */
   val ques = Vector("Who", "What", "When", "Where", "Why")
   val startsW: Option[String] = ques.find(q => q.startsWith("W"))  //Some(Who)
@@ -36,7 +39,9 @@ object scala05_MapAndFor_yield extends App {
   val hasLen5: Option[String] = ques.find(q => q.length==5)        //Some(Where)
   val startsH: Option[String] = ques.find(q => q.startsWith("H"))  //None
 
-  //尽管Option不是一个集合，它也提供了map方法。@如果Option是一个Some，可被称为“已定义”的可选值，则map方法将返回—个新的包含了将原始Some元素传入map方法后得到返回值的新Option。下面的示例对startsW进行了变换,而它本来是一个包含字符串"Who"的Some:
+  //尽管Option不是一个集合，它也提供了map方法。
+  // @如果Option是一个Some，可被称为“已定义”的可选值，则map方法将返回—个新的包含了将原始Some元素传入map方法后得到返回值的新Option。
+  // 下面的示例对startsW进行了变换,而它本来是一个包含字符串"Who"的Some:
   startsW.map(word=>word.toUpperCase()) //Some(WHO)
   for word <- startsW yield word.toUpperCase()  //Some(WHO)
 

@@ -1,5 +1,7 @@
 package chapter03
 
+import java.lang.System.console
+
 object scala01_example_List extends App {
 
   /*
@@ -7,14 +9,16 @@ object scala01_example_List extends App {
   数组元素是可变的，列表永远是不可变的
    */
   //val oneTwoThree =List(1,2,3)
-
-
   val oneTwo = List(1, 2)
+  Console println oneTwo
   val threeFour = List(3, 4)
+  Console println threeFour
   // 返回新列表
   val oneTwoThreeFour = oneTwo ::: threeFour
+  Console println oneTwoThreeFour
 
-  //也许在列表上用得最多的操作符是“::”，读作“cons”。它在一个已有列表的最前面添加—个新的元素，并返回这个新的列表。例如，如果执行下面这段代码:
+  //也许在列表上用得最多的操作符是“::”，读作“cons”。
+  // 它在一个已有列表的最前面添加—个新的元素，并返回这个新的列表。例如，如果执行下面这段代码:
   val twoThree = List(2, 3)
   val oneTwoThree = 1 :: twoThree //List(1, 2, 3)
   //val oneTwoThree =  twoThree.::(1)
@@ -28,7 +32,11 @@ object scala01_example_List extends App {
   val one_TwoThree = 1 :: 2 :: 3 :: Nil //List(1, 2, 3)
   println(one_TwoThree)
 
-  //List类的确提供了“追加”( append)操作，写作:+(在第24章有详细介绍)，但这个操作很少被使用，因为向列表（末尾)追加元素的操作所需要的时间随着列表的大小线性增加，而使用::在列表的前面添加元素只需要常量时间(constant time)。如果想通过追加元素的方式高效地构建列表，则可以依次在头部添加完成后，调用reverse方法。也可以用ListBuffer，这是一个可变的列表，它支持追
+  //List类的确提供了“追加”( append)操作，写作:+(在第24章有详细介绍)，但这个操作很少被使用，
+  // 因为向列表（末尾)追加元素的操作所需要的时间随着列表的大小线性增加，
+  // 而使用::在列表的前面添加元素只需要常量时间(constant time)。
+  // 如果想通过追加元素的方式高效地构建列表，则可以依次在头部添加完成后，调用reverse方法。
+  // 也可以用ListBuffer，这是一个可变的列表，它支持追
 
   private val thrill = List("1", "2", "3", "hello")
 
